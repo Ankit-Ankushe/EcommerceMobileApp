@@ -5,7 +5,7 @@ A modern, scalable Android application built with Jetpack Compose, following MVV
 ## 📱 Screenshots
 | Home Screen | Product Detail |
 | :---: | :---: |
-| ![Home](screenshots/home.png) | ![Detail](screenshots/details.png) |
+| <img src="screenshots/home.png" width="300"> | <img src="screenshots/details.png" width="300"> |
 
 
 ## 🚀 Features
