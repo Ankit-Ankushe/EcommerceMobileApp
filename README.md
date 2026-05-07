@@ -2,7 +2,7 @@
 
 A modern, scalable Android application built with Jetpack Compose, following MVVM and Clean Architecture principles.
 
-### 📥 [Download Demo APK](apk/ecommerce-app-debug.apk?raw=true)
+### 📥 [Download Demo APK](https://github.com/Ankit-Ankushe/EcommerceMobileApp/raw/main/apk/ecommerce-app-debug.apk)
 
 
 ## 📱 Screenshots
