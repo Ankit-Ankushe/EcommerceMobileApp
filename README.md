@@ -26,20 +26,46 @@ A modern, scalable Android application built with Jetpack Compose, following MVV
 - **Asynchronous**: Kotlin Coroutines & Flow
 - **Bonus Helpers**: Accompanist (Pager, SwipeRefresh)
 
-## 🏗 Architecture Detail
-The project follows **Clean Architecture** principles with a clear separation of concerns:
-1.  **Data Layer**: Handles API requests via Retrofit and data modeling. Includes the `ProductRepository` implementation.
-2.  **Domain Layer**: (Simplified for this task) Includes the Repository interfaces and data models.
-3.  **UI/Presentation Layer**:
-    *   **ViewModels**: Manage UI state using `StateFlow` and handle business logic.
-    *   **Compose Screens**: Declarative UI components that react to StateFlow updates.
-    *   **Navigation**: Single Activity architecture using Compose Navigation.
+## 🛠️ Setup Instructions
+Follow these steps to get the project running on your local machine:
 
-## ⚙️ Setup Instructions
-1.  Clone the repository.
-2.  Open in **Android Studio Electric Eel** (or newer).
-3.  Ensure you are using **Java 11** for the Gradle build.
-4.  Sync Gradle and run the `app` module on an emulator or physical device (API 24+).
+### 1. Prerequisites
+*   **Android Studio**: Electric Eel | 2022.1.1 or newer.
+*   **JDK**: Java 11 (ensure your JAVA_HOME and Project Structure are set to Java 11).
+*   **Android SDK**: API Level 33 (Android 13.0).
 
-## 📝 Notes on API Data
-Please note that the current `freeapi.app` provides image URLs that may return 404 errors due to external changes at the source (DummyJSON). The app includes robust error handling for these cases and displays a "Broken Image" icon to signify missing remote data, as per the developer task requirements.
+### 2. Installation
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Ankit-Ankushe/EcommerceMobileApp.git
+    ```
+2.  **Open in Android Studio**:
+    *   Go to `File -> Open` and select the project folder.
+    *   Wait for the Gradle sync to complete.
+3.  **Build & Run**:
+    *   Select the `app` configuration.
+    *   Choose an emulator or physical device (API 24+).
+    *   Click the **Run** (green play) button.
+
+---
+
+## 🏗️ Technical Architecture
+The project is built using **Clean Architecture** principles to ensure scalability, testability, and maintainability.
+
+### Layers:
+*   **Presentation (UI)**: Built with 100% **Jetpack Compose**. Uses **StateFlow** to observe UI state from ViewModels.
+*   **Domain**: Contains the core Business Logic and Repository interfaces.
+*   **Data**: Implementation of Repositories, Retrofit Service interfaces, and Data Models.
+
+### Key Patterns Used:
+*   **MVVM Pattern**: Decouples UI logic from business logic.
+*   **Repository Pattern**: Abstracts the data source (Network) from the rest of the app.
+*   **Dependency Injection (Hilt)**: Manages object lifecycles and simplifies testing.
+*   **Coroutines & Flow**: Handles all asynchronous operations with safety and efficiency.
+
+---
+
+## 📝 Important Notes for Reviewers
+*   **API Image URLs**: The `freeapi.app` source currently provides some image links that are 404 (deleted from host). I have implemented robust error handling to display a "Broken Image" icon in these cases, rather than a blank space, to maintain UI integrity.
+*   **Pull-to-Refresh**: Swipe down on the Home Screen to trigger a fresh API call.
+*   **Animations**: Check the list entrance animations for a smooth UX.
