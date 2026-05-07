@@ -1,0 +1,89 @@
+Android Developer Task
+Duration - 24 Hours
+
+🔹 Objective
+Design and develop a scalable Android application using modern architecture and best practices. The app will display a list of products fetched from a public API, with filtering, detailed views, and dynamic UI handling.
+
+
+🔹 Tech Stack Requirements
+Android Jetopack
+Architecture: MVVM (Model-View-ViewModel)
+Dependency Injection: Hilt
+Networking: Retrofit
+Asynchronous Programming: Kotlin Coroutines / Flow
+UI Components: RecyclerView, ViewBinding / Jetpack Compose (optional but preferred)
+Image Loading: Coil
+State Management: LiveData / StateFlow
+
+
+🔹 API Details
+Product List API: https://api.freeapi.app/api/v1/public/randomproducts?page=1&limit=100
+Product Detail API: https://api.freeapi.app/api/v1/public/randomproducts/{id}
+
+
+🔹 Features to Implement
+Home Screen
+UI Requirements:
+Clean and modern UI
+The top section should include the Category Filter
+Product list displayed using RecyclerView Functional Requirements:
+Fetch product list from API
+Extract and populate category filter dynamically from API response
+Filter products based on the selected category Product Item UI:
+Each item should display:
+
+Thumbnail Images
+Title
+Price
+Discount Percentage
+Rating
+
+Stock Status Indicator:
+
+Display stock status with conditional UI:
+
+
+
+
+The filter should work as per the selected filter on the home, and the item should filter out
+Product Detail Screen
+Navigation:
+
+On clicking a product item, navigate to the detail screen UI Requirements:
+Top section: Image carousel (scrollable)
+Include page indicator (dots)
+Below section:
+Title
+Description
+Price
+Discount Percentage
+Rating
+Stock
+Brand
+Category
+
+
+🔹 Code Quality Expectations
+Follow clean architecture principles
+Proper separation of concerns (UI, ViewModel, Repository, Data layer)
+Use Repository Pattern
+Handle API states:
+Loading
+Success
+Error
+Write readable, maintainable, and well-commented code
+Use meaningful naming conventions
+Avoid hardcoding values
+
+
+🔹 Bonus Points (Nice to Have)
+Caching
+UI animations/transitions
+Error handling with a retry mechanism
+
+
+🔹 Deliverables
+README file including:
+Setup instructions
+Architecture explanation
+Libraries used
